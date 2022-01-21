@@ -1,0 +1,426 @@
+/* OVR ------------------------------------------------------ */
+
+body {
+    background: black;
+    color: white;
+    font-family: Montserrat;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* NAV ------------------------------------------------------ */
+
+.navWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    width: 1000px;
+    margin-top: 80px;
+    position: fixed;
+    z-index: 5;
+}
+
+.navBG {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);   
+    width: 1500px;
+    height: 17%;
+    position: fixed;
+    justify-self: center;
+    z-index: 5;
+    top: 0;
+}
+
+.searchBar {
+    background-color:#0E0F10;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 300px;
+    border-radius: 7px;
+}
+
+#searchIcon {
+    max-width: 15px;
+    padding-left: 15px;
+}
+
+.searchText {
+    color: #4D4D4D;
+    font-size: 10pt;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+.title {
+    justify-self: center;
+    grid-column: 2;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 10pt;
+}
+
+.author {
+    justify-self: right;
+    text-decoration: none;
+    color: white;
+    grid-column: 3;
+    letter-spacing: 3px;
+    font-size: 8pt;
+}
+
+.menuWrapper {
+    position: absolute;
+    justify-self: right;
+    margin-top: 100px;
+}
+
+.author::before {
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: white;
+}
+
+.authorltr::before {
+    width: 0%;
+    bottom: 13px;
+}
+
+.authorltr:hover::before {
+    width: 117px;
+}
+
+.desc {
+    position: absolute;
+    z-index: 6;
+    max-width: 200px;
+    font-size: 10pt;
+    display: none;
+}
+
+/* menu */
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#fff;
+    stroke-width: 3;
+    stroke-linecap:round;
+  }
+
+  .ham5 .top {
+    stroke-dasharray: 30 82;
+  }
+
+  .ham5 .bottom {
+    stroke-dasharray: 20 82;
+  }
+
+  .ham5.active .top {
+    stroke-dasharray: 14 82;
+    stroke-dashoffset: -72px;
+  }
+
+  .ham5.active .bottom {
+    stroke-dasharray: 14 82;
+    stroke-dashoffset: -72px;
+  }
+
+/* CARD ------------------------------------------------------ */
+
+.cardWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cardParent {
+    display: flex;
+    width: 1000px;
+    margin-top: 100px;
+}
+
+#spacer {
+    margin-top: 250px;
+}
+
+.cardTitle {
+    position: absolute;
+    justify-self: left;
+    text-decoration: none;
+    color: white;
+    margin-top: -30px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 10pt;
+}
+
+.cardTitle::before {
+    transition: 300ms;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: white;
+}
+
+.cardTitleltr::before {
+    width: 0%;
+    bottom: -3px;
+}
+
+.cardTitleltr:hover::before {
+    width: 100%;
+}
+
+.cardLogo {
+    display: flex;
+    justify-self: left;
+    background-color: #0E0F10;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 100ms ease-out;
+}
+
+.cardLogo:hover {
+    z-index: 2;
+    transition: all 100ms ease-in;
+    transform: scale(.99);
+}
+
+.logo {
+    padding: 50px;
+    transition: all 100ms ease-out;
+}
+
+.cardLogo:hover > .logo {
+    transform: scale(1.05);
+    transition: all 100ms ease-in;
+}
+
+.cardWordmark {
+    background-color: #0E0F10;
+    width: 385px;
+    height: 250px;
+    margin-left: 5px;
+    transition: all 100ms ease-out;
+}
+
+.cardWordmark:hover {
+    z-index: 2;
+    transition: all 100ms ease-in;
+    transform: scale(.99);
+}
+
+.wordmark {
+    max-width: 250px;
+    padding-left: 67.5px;
+    padding-right: 67.5px;
+    padding-top: 95px;
+    transition: all 100ms ease-out;
+}
+
+.cardWordmark:hover > .wordmark {
+    transform: scale(1.05);
+    transition: all 100ms ease-in;
+}
+
+.cardFont {
+    background-color: #0E0F10;
+    min-width: 250px;
+    height: 250px;
+    margin-left: 5px;
+    transition: all 100ms ease-out;
+}
+
+.cardFont:hover {
+    z-index: 2;
+    transition: all 100ms ease-in;
+    transform: scale(.99);
+}
+
+.cardColor1 {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    margin-left: 900px;
+    border-radius: 0px 10px 0px 0px;
+    transition: all 100ms ease-out;
+    z-index: 1;
+}
+
+.cardColor1:hover {
+    z-index: 2;
+    transition: all 100ms ease-in;
+    transform: scale(.98);
+}
+
+#colorCode1 {
+    position: relative;
+    flex-direction: column;
+    left: 50px;
+    padding-left: 50px;
+    font-size: 10pt;
+    font-weight: 400;
+    max-height: 80px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 100ms ease-out;
+}
+
+.cardColor1:hover + #colorCode1 {
+    left: 70px;
+    opacity: 100;
+    visibility: visible;
+    transition: all 100ms ease-in;
+}
+
+#colorCode1:hover {
+    left: 70px;
+    opacity: 100;
+    visibility: visible;
+}
+
+.codeTag {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 150px;
+    font-size: 10pt;
+}
+
+.cardColor2 {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    margin-left: 900px;
+    margin-top: 85px;
+    transition: all 100ms ease-out;
+}
+
+.cardColor2:hover {
+    z-index: 2;
+    transition: all 100ms ease-in;
+    transform: scale(.98);
+}
+
+.cardColor3 {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    margin-left: 900px;
+    margin-top: 170px;
+    border-radius: 0px 0px 10px 0px;
+    transition: all 100ms ease-out;
+}
+
+.cardColor3:hover {
+    z-index: 2;
+    transition: all 100ms ease-in;
+    transform: scale(.98);
+}
+
+.dropDown {
+    width: 100px;
+    height: 33px;
+    background-color: #0E0F10;
+    position: absolute;
+    margin-left: 900px;
+    margin-top: 260px;
+    border-radius: 7px;
+    display: flex;
+}
+
+#dropDown {
+    align-self: center;
+    font-size: 10pt;
+    letter-spacing: 2px;
+    margin-left: 14px;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+#dropDownIcon {
+    max-width: 15px;
+    margin-left: 5px;
+}
+
+/* CARD COLORS ------------------------------------------------------ */
+
+#cardColorMeta1 {
+    background-color: #0065E0;
+}
+
+#cardColorMeta2 {
+    background-color: #1C2B33;
+}
+
+#cardColorMeta3 {
+    background-color: #F1F4F7;
+}
+
+#cardColorFB1 {
+    background-color: #1877F2;
+}
+
+#cardColorFB2 {
+    background-color: #3C85D0;
+}
+
+#cardColorFB3 {
+    background-color: #FFFFFF;
+}
+
+#cardColorIN1 {
+    background-color: #1877F2;
+}
+
+#cardColorIN2 {
+    background-color: #3C85D0;
+}
+
+#cardColorIN3 {
+    background-color: #FFFFFF;
+}
+
+#cardColorTW1 {
+    background-color: #1D9BF0;
+}
+
+#cardColorTW2 {
+    background-color: #000000;
+}
+
+#cardColorTW3 {
+    background-color: #FFFFFF;
+}

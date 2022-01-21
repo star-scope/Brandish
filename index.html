@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandish</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sound.js"></script>
+    <audio id='sfx' src="images/click.mp3"></audio>
+</head>
+<body>
+    <div class="navWrapper">
+        <div class="navBG"></div>
+        <div class="nav">
+            <div class="searchBar">
+                <img id="searchIcon" src="images/search.svg">
+                <p class="searchText">SEARCH</p>
+            </div>
+            <p class="title">BRANDISH</p>
+            <a class="author authorltr" href="https://starscope.design" target="blank">BY STARSCOPE</a>
+            <a class="menuWrapper">
+                <svg class="ham hamRotate180 ham5" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                    <path
+                          class="line top"
+                          d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
+                    <path
+                          class="line middle"
+                          d="m 70,50 h -40" />
+                    <path
+                          class="line bottom"
+                          d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
+                  </svg>
+            </a>
+        </div>
+    </div>
+    <p class="desc">Quickly download assets from well-known companies, copy color codes, and get quick links to their full design guidelines.</p>
+    <div class="cardWrapper">
+        <div class="cardParent" id="spacer">
+            <a class="cardTitle cardTitleltr" href="https://www.facebook.com/brand/resources/facebookcompany/company-brand" target="blank">META</a>
+            <div class="cardLogo" onmouseover="PlaySound('sfx')" onmouseout="StopSound('sfx')">
+                <img class="logo" src="images/Meta/Meta Icon.png">
+            </div>
+            <div class="cardWordmark" onmouseover="PlaySound('sfx')" onmouseout="StopSound('sfx')">
+                <img class="wordmark" src="images/Meta/Meta Wordmark.png">
+            </div>
+            <div class="cardFont" onmouseover="PlaySound('sfx')" onmouseout="StopSound('sfx')"></div>
+            <div class="cardColor1" id="cardColorMeta1" onmouseover="PlaySound('sfx')" onmouseout="StopSound('sfx')"></div>
+            <div id="colorCode1">
+                <p class="codeTag">HEX: #0065E0</p>
+                <p class="codeTag">RGB: 0 101 224 100%</p>
+                <p class="codeTag">HSB: 213 100 88 100%</p>
+            </div>
+            <div class="cardColor2" id="cardColorMeta2" onmouseover="PlaySound('sfx')" onmouseout="StopSound('sfx')"></div>
+            <div class="cardColor3" id="cardColorMeta3" onmouseover="PlaySound('sfx')" onmouseout="StopSound('sfx')"></div>
+            <div class="dropDown">
+                <p id="dropDown">MORE</p>
+                <img id="dropDownIcon" src="images/arrow.svg"></img>
+            </div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <a class="cardTitle cardTitleltr" href="https://www.facebook.com/brand/resources/facebookapp" target="blank">FACEBOOK</a>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1" id="cardColorFB1"></div>
+            <div class="cardColor2" id="cardColorFB2"></div>
+            <div class="cardColor3" id="cardColorFB3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">MESSENGER</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">INSTAGRAM</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1" id="cardColorIN1"></div>
+            <div class="cardColor2" id="cardColorIN2"></div>
+            <div class="cardColor3" id="cardColorIN3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">WHATSAPP</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">OCULUS</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">WORKPLACE</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">PORTAL</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">BLOCK</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">TWITTER</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1" id="cardColorTW1"></div>
+            <div class="cardColor2" id="cardColorTW2"></div>
+            <div class="cardColor3" id="cardColorTW3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">CASHAPP</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">TIDAL</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">APPLE</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">MICROSOFT</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">DISCORD</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="cardParent">
+            <p class="cardTitle">PINTEREST</p>
+            <div class="cardLogo"></div>
+            <div class="cardWordmark"></div>
+            <div class="cardFont"></div>
+            <div class="cardColor1"></div>
+            <div class="cardColor2"></div>
+            <div class="cardColor3"></div>
+        </div>
+    </div>
+</body>
+</html>
