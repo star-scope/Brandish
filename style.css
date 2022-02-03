@@ -166,8 +166,10 @@ body {
 }
 
 .cardParent {
-    display: flex;
-    width: 1000px;
+    display: grid;
+    grid-template-columns: 250px 385px 250px 100px;
+    grid-template-rows: 80px 80px 80px;
+    grid-gap: 5px;
     margin-top: 100px;
 }
 
@@ -205,10 +207,9 @@ body {
 
 .cardLogo {
     display: flex;
-    justify-self: left;
+    grid-column: 1 / 1;
+    grid-row: 1 / -1;
     background-color: #0E0F10;
-    height: 250px;
-    width: 250px;
     border-radius: 10px 0px 0px 10px;
     transition: all 100ms ease-out;
 }
@@ -230,10 +231,12 @@ body {
 }
 
 .cardWordmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #0E0F10;
-    width: 385px;
-    height: 250px;
-    margin-left: 5px;
+    grid-column: 2 / 2;
+    grid-row: 1 / -1;
     transition: all 100ms ease-out;
 }
 
@@ -245,9 +248,7 @@ body {
 
 .wordmark {
     max-width: 250px;
-    padding-left: 67.5px;
-    padding-right: 67.5px;
-    padding-top: 95px;
+    max-height: 50px;
     transition: all 100ms ease-out;
 }
 
@@ -257,10 +258,10 @@ body {
 }
 
 .cardFont {
+    display: flex;
     background-color: #0E0F10;
-    min-width: 250px;
-    height: 250px;
-    margin-left: 5px;
+    grid-column: 3 / 3;
+    grid-row: 1 / -1;
     transition: all 100ms ease-out;
 }
 
@@ -271,10 +272,8 @@ body {
 }
 
 .cardColor1 {
-    position: absolute;
-    width: 100px;
-    height: 80px;
-    margin-left: 900px;
+    grid-column: 4 / 4;
+    grid-row: 1 / 1;
     border-radius: 0px 10px 0px 0px;
     transition: all 100ms ease-out;
     z-index: 1;
@@ -287,27 +286,25 @@ body {
 }
 
 #colorCode1 {
-    position: relative;
-    flex-direction: column;
-    left: 50px;
-    padding-left: 50px;
+    position: absolute;
+    margin-left: 900px;
     font-size: 10pt;
     font-weight: 400;
-    max-height: 80px;
+    background: 
     opacity: 0;
     visibility: hidden;
-    transition: all 100ms ease-out;
+    transition: all 200ms ease-out;
 }
 
 .cardColor1:hover + #colorCode1 {
-    left: 70px;
+    padding-left: 110px;
     opacity: 100;
     visibility: visible;
     transition: all 100ms ease-in;
 }
 
 #colorCode1:hover {
-    left: 70px;
+    padding-left: 110px;
     opacity: 100;
     visibility: visible;
 }
@@ -320,12 +317,10 @@ body {
 }
 
 .cardColor2 {
-    position: absolute;
-    width: 100px;
-    height: 80px;
-    margin-left: 900px;
-    margin-top: 85px;
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
     transition: all 100ms ease-out;
+    z-index: 1;
 }
 
 .cardColor2:hover {
@@ -334,12 +329,31 @@ body {
     transform: scale(.98);
 }
 
-.cardColor3 {
+#colorCode2 {
     position: absolute;
-    width: 100px;
-    height: 80px;
     margin-left: 900px;
-    margin-top: 170px;
+    margin-top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-out;
+}
+
+.cardColor2:hover + #colorCode2 {
+    padding-left: 110px;
+    opacity: 100;
+    visibility: visible;
+    transition: all 100ms ease-in;
+}
+
+#colorCode2:hover {
+    padding-left: 110px;
+    opacity: 100;
+    visibility: visible;
+}
+
+.cardColor3 {
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
     border-radius: 0px 0px 10px 0px;
     transition: all 100ms ease-out;
 }
@@ -348,6 +362,28 @@ body {
     z-index: 2;
     transition: all 100ms ease-in;
     transform: scale(.98);
+}
+
+#colorCode3 {
+    position: absolute;
+    margin-left: 900px;
+    margin-top: 170px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-out;
+}
+
+.cardColor3:hover + #colorCode3 {
+    padding-left: 110px;
+    opacity: 100;
+    visibility: visible;
+    transition: all 100ms ease-in;
+}
+
+#colorCode3:hover {
+    padding-left: 110px;
+    opacity: 100;
+    visibility: visible;
 }
 
 .dropDown {
